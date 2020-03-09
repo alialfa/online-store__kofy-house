@@ -7,6 +7,7 @@ KOFY HOUSE - *(an online coffee store)*
 2. [Installation](#installation)
 3. [Usage](#usage)
 4. [Credits](#credits)
+5. [Languages](#languages)
 
 ## DESCRIPTION: 
 The goal of the Kofy House project was to create a functional front-end online store where a user can see what we are about, visit a store where coffee brewing machines, beans and books are available. Load the items to a cart, obtain a real time total bill and simulate a purchase checkout for all the items.  
@@ -29,4 +30,7 @@ After you have this locally in your machine, all navigation occurs in the browse
 ## CREDITS: 
 This project was compiled via collaboration with the following authors: 
 - Ali Mongi - [Email Me](mailto:alphan.mongi@gmail.com)
-* [HyperionDev](https://www.hyperiondev.com/) 
+* [HyperionDev](https://www.hyperiondev.com/)
+
+### LANGUAGES
+![languages](https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/126959786/original/cd633aee683a743f44d95d74cb4a2c2e3e979082/write-html-css-javascript-jquery-bootstrap-code-for-you.jpg)
