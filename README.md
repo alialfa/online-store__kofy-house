@@ -16,9 +16,9 @@ The goal of the Kofy House project was to create a functional front-end online s
 5. [Credits](#CREDITS)
 
 **INSTALLATION:** Installation is the next section in an effective README. Tell other users how to install your project locally. Optionally, include a gif to make the process even more clear for other people.
-
+---
 **USAGE:** The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
-
-**###CREDITS:** This project was compiled via collaboration with the following authors: 
+---
+**### CREDITS:** This project was compiled via collaboration with the following authors: 
 - Ali Mongi [Email Me](mailto:alphan.mongi@gmail.com)
 * [HyperionDev](https://www.hyperiondev.com/) 
