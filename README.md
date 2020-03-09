@@ -19,7 +19,7 @@ Clone it to your local repo, navigate to the main folder and run the 'index.html
 ## USAGE:
 After you have this locally in your machine, all navigation occurs in the browser.
 | File           | What it Does                     |
-| -------------- |:-------------:                   |
+| -------------- | -------------:                   |
 | index.html     | landing page of site             |
 | store.html     | add store items to a cart        |
 | cart.html      | view what is in your cart + bill |
