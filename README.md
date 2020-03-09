@@ -1,7 +1,5 @@
-# THE KOFY HOUSE PROJECT
-
-**PROJECT NAME:** KOFY HOUSE - *(an online coffee store)*
 ![logo](https://github.com/alialfa/online-store__kofy-house/blob/master/images/khlogo.png "Logo")
+# THE KOFY HOUSE PROJECT
 
 **TABLE of CONTENTS:** 
 1. [Description](#description)
@@ -9,7 +7,10 @@
 3. [Usage](#usage)
 4. [Credits](#credits)
 
-**DESCRIPTION:** 
+## PROJECT NAME:
+** KOFY HOUSE - *(an online coffee store)*
+
+## DESCRIPTION: 
 The goal of the Kofy House project was to create a functional front-end online store where a user can see what we are about, visit a store where coffee brewing machines, beans and books are available. Load the items to a cart, obtain a real time total bill and simulate a purchase checkout for all the items.  
 
 ## INSTALLATION:
@@ -26,7 +27,8 @@ After you have this locally in your machine, all navigation occurs in the browse
 | checkout.html  | select delivery & pay            |
 | community.html | interact with Kofy House         |
 | about.html     | mission of Kofy House            |
+
 ## CREDITS: 
 This project was compiled via collaboration with the following authors: 
-- Ali Mongi [Email Me](mailto:alphan.mongi@gmail.com)
+- Ali Mongi - [Email Me](mailto:alphan.mongi@gmail.com)
 * [HyperionDev](https://www.hyperiondev.com/) 
