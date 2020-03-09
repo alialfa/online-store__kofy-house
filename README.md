@@ -1,7 +1,7 @@
 # THE KOFY HOUSE PROJECT
 
 [KH]:
-![alt text] (https://github.com/alialfa/online-store__kofy-house/images/khlogo.png)
+![alt text] (https://github.com/alialfa/online-store__kofy-house/blob/master/images/khlogo.png)
 
 **PROJECT NAME:** 
 KOFY HOUSE - *an online coffee shop / store*
