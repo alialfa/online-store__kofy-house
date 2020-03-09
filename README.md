@@ -12,4 +12,4 @@ The goal of the Kofy House project was to create a functional front-end online s
 
 **USAGE:** The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
 
-**CREDITS:** This project was compiled by Ali Mongi who can be reached at [email](mailto:alphan.mongi@gmail.com){target="_top"} in conjuction with [HyperionDev](www.hyperiondev.com){target="_blank"} 
+**CREDITS:** This project was compiled by Ali Mongi who can be reached at [email](mailto:alphan.mongi@gmail.com)<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Send Mail</a> in conjuction with [HyperionDev](www.hyperiondev.com){target="_blank"} 
