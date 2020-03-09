@@ -18,7 +18,7 @@ Clone it to your local repo, navigate to the main folder and run the 'index.html
 
 ## USAGE:
 After you have this locally in your machine, all navigation occurs in the browser.
-| Page           | What it Does                     |
+| File           | What it Does                     |
 | -------------- |:-------------:                   |
 | index.html     | landing page of site             |
 | store.html     | add store items to a cart        |
@@ -26,6 +26,10 @@ After you have this locally in your machine, all navigation occurs in the browse
 | checkout.html  | select delivery & pay            |
 | community.html | interact with Kofy House         |
 | about.html     | mission of Kofy House            |
+| coffee-bootstrap.css | default pages css          |
+| animation.css  | animates images effects          |
+| popoup.css     | allows dialog popup              |
+
 
 ## CREDITS: 
 This project was compiled via collaboration with the following authors: 
