@@ -1,0 +1,128 @@
+<!--Ali_Mongi-WD L1T15 - Capstone Project I-->
+<!-- about us page tells us moe about the company and our values -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- inserting of link to bootstrap css sheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Kofy | About US</title>
+    <!-- my custom styling sheet -->
+    <!-- animation: allows colored changing backgrounds -->
+    <link rel="stylesheet" type="text/css" href="../css/coffee-bootstrap.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/animation.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-secondary navbar-default" id="main-nav"> -->
+    <nav class="navbar navbar-expand-lg navbar-default" id="navbar-custom">
+        <!-- company name with image logo -->
+        <a class="navbar-brand" href="../index.html" id="navbar-logo" style="color: bisque">
+            <!-- <img src="../images/logo.png" width="170" height="60" class="d-inline-block align-top" alt="logo"> -->
+            <b>KH</b>
+        </a>
+        <!-- hamburger toggle menu created in the scenario the windos is too small, menu links display here -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- the actual navbar for an unordered list -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="store.html">STORE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shipping.html">SHIPPING & RETURNS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="community.html">COMMUNITY</a>
+                </li>
+            </ul>
+            <!-- last items shifted to the right with margin-left auto-->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">
+                        <i class="fas fa-2x fa-cart-arrow-down"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="container_about">
+
+        <section class="section_post">
+
+            <!-- start area on who we are and our history -->
+            <!-- h1 is applied from ext css, h2 shows the headline, and the p - is for descriptions -->
+            <h1>About Us</h1>
+            <p>
+                Kofy House is an online store for South African coffee lovers. You can order freshly roasted coffee beans from some of SA's best artisan roasters as well as a broad selection of coffee makers, coffee grinders and accessories, delivered by courier, anywhere
+                in the country.
+            </p>
+
+            <!-- descrition of our main product 1 -->
+            <article>
+                <h2>The Coffee Beans</h2>
+                <p>Our journey began with the beans. One of the most important factors in making a great coffee is using freshly roasted beans and grinding them just before you brew, no matter how you make your coffee. Knowing this, our very first goal was
+                    to give all of South Africa access to high quality, fresh coffee beans.</p>
+                <p>Teaming with incredibly talented artisanal roasters, some of whom are starting to earn an international reputation. Unfortunately, getting a hold of the coffee they roast, particularly soon after roast date, can be a bit tricky if they're
+                    not nearby. So we started this business by working with some of the very best roasters and delivering their beans across the country.</p>
+            </article>
+
+            <!-- descrition of our main product 2 -->
+            <article>
+                <h2>The Coffee Grinders & Brewing Equipment</h2>
+                <p>It wasn't long after we started delivering coffee beans that we began looking to add to our selection. We only sell whole bean coffee (that's the best way to enjoy it) so we realised that we at least needed to offer affordable coffee grinders
+                    to our customers. But we didn't stop there. We've taken our time developing the best possible collection of equipment for the casual barista who wants to get the best out of his or her coffee.</p>
+            </article>
+
+            <!-- descrition of our secondary product-->
+            <article>
+                <h2>The World of Coffee</h2>
+                <p>We don't just want to be a store however. Like the roasters, baristas and other coffee professionals we so admire here in the Mother City, we try to make the effort to pass on what we've learned about coffee. From coffee origins, to brew
+                    methods, we do our best to share whatever information we can. You'll find lots of tidbits on the product pages themselves, and we also have some reviews & testimonials.</p>
+            </article>
+        </section>
+    </div>
+
+    <!-- footer section showing general info and contact details -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Visit Us</h6>
+                    <p>We're primarily an online store, but you are welcome to visit our HQ to buy some beans or brewing equipment. We have card payment facilities available.<br> You can also place an order online and collect it in person (the option is
+                        on the cart page).</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <p>212 Durban Rrive, Ridgeway City, Sandton ZA
+                        <br /> <a href="mailto:info@kofyhouse.com?Subject=Hi%20Kofy" target="_top">Email Us |</a>
+                        <a href="mailto:callcentre@postnetsa.co.za?Subject=Hi%20Shippers" target="_top">Mail Our Shipping Crew</a>
+                        <br />+27 (0)87 073 5694 | +27 (0)745730889
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center">© 2020 Copyright: <b>www.kofyhouse.co.za</b> | <b>Ali Mongi</b> @HyperionDev</div>
+    </footer>
+</body>
+
+</html>

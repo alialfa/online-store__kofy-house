@@ -1,0 +1,339 @@
+<!--Ali_Mongi-WD L1T15 - Capstone Project I-->
+<!-- STORE is the main catalogue page of the website -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="refresh" content="30" />
+
+    <!-- inserting of link to bootstrap css sheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Kofy | Store</title>
+
+    <!-- my custom styling sheets -->
+    <!-- popup: allows image popup windows -->
+    <link rel="stylesheet" type="text/css" href="../css/coffee-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/popup.css">
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome/css/all.min.css">
+
+    <!-- insert javascript links-->
+    <script src="storeCart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body onload="loadStore()">
+    <!-- NAVIGATION -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-secondary navbar-default" id="main-nav"> -->
+    <nav class="navbar navbar-expand-lg navbar-default" id="navbar-custom">
+        <!-- company name with image logo -->
+        <a class="navbar-brand" href="../index.html" id="navbar-logo" style="color: bisque">
+            <!-- <img src="../images/logo.png" width="170" height="60" class="d-inline-block align-top" alt="logo"> -->
+            <b>KH</b>
+        </a>
+        <!-- hamburger toggle menu created in the scenario the windos is too small, menu links display here -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- the actual navbar for an unordered list -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="store.html">STORE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shipping.html">SHIPPING & RETURNS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="community.html">COMMUNITY</a>
+                </li>
+            </ul>
+            <!-- last items shifted to the right with margin-left auto-->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">
+                        <i class="fas fa-2x fa-cart-arrow-down"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" id="container_about">
+        <h1>Buy Coffee Merchandise</h1>
+    </div>
+    <!-- THE STORE / CATALOGUE -->
+    <div class="container" id="container_store">
+        <div class="store-table_images">
+            <!-- on mouse row hover, table highlight change shows-->
+            <table class="table table-hover table-sm" id="store_table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th colspan="4" id="headinggallery" style="text-align: right;"> Select a Product from Our Unique Catalogue:</th>
+                    </tr>
+                </thead>
+                <!-- table places products on sale with their descriptions-->
+                <!-- class img-thumbnail: gives an image a rounded 1px border appearance. 
+                    img-fluid: images made responsive with max-width: 100%; to scales with parent element.
+                     images are also applied to class zoom effects there-->
+                <tbody>
+                    <!--******************************** first row ********************************-->
+                    <tr>
+                        <th scope="row" id="brew-gear">BREWING GEAR</th>
+                        <td>
+                            <a class="onclick_button" href="#popup1"><img src="../images/store-gear1.jpg" alt="gear1" class="img-thumbnail img-fluid  d-block mt-4 mb-2 onclick_button zoom zoom-opac"></a>
+                            <p>Bialetti Moka Express Stovetop</p>
+                            <p>
+                                <!-- span box floats the price to the left -->
+                                <!-- button imitates an add to cart button -->
+                                <span class=store_item-price> R500</span>
+                                <button class="btn btn-secondary btnAddItem" value="1" id="1">+</button>
+                            </p>
+                        </td>
+                        <td>
+                            <a class="onclick_button" href="#popup2"><img src="../images/store-gear2.jpg" alt="gear2" class="img-thumbnail img-fluid  d-block mt-4 mb-2 onclick_button zoom"></a>
+                            <p>Expobar Office Leva EB-61 Dual</p>
+                            <p>
+                                <!-- span box floats the price to the left -->
+                                <!-- button imitates an add to cart button -->
+                                <span class=store_item-price> R29000</span>
+                                <button type="submit" class="btn btn-secondary btnAddItem" value="2" id="2">+</button>
+                            </p>
+                        </td>
+                        <td>
+                            <a class="onclick_button" href="#popup3"><img src="../images/store-gear3.jpg" alt="gear3" class="img-thumbnail img-fluid  d-block mt-4 mb-2 onclick_button zoom zoom-gray"></a>
+                            <p>Bodum Spare French Press</p>
+                            <p>
+                                <span class=store_item-price> R2100</span>
+                                <button type="submit" class="btn btn-secondary btnAddItem" value="3" id="3">+</button>
+                            </p>
+                        </td>
+                    </tr>
+                    <!--******************************** second row ********************************-->
+                    <tr>
+                        <th scope="row" id="art-coffee">ARTISAN COFFEE</th>
+                        <td>
+                            <a class="onclick_button" href="#popup4"><img src="../images/store-artisan1.jpg" alt="artisan1" class="img-thumbnail img-fluid d-block mt-4 mb-2 onclick_button zoom zoom-blur"></a>
+                            <p>Legado Single Origin</p>
+                            <p>
+                                <span class=store_item-price> R200</span>
+                                <button type="submit" class="btn btn-secondary btnAddItem" value="4" id="4">+</button>
+                            </p>
+                        </td>
+                        <td>
+                            <a class="onclick_button" href="#popup5"><img src="../images/store-artisan2.jpg" alt="artisan2" class="img-thumbnail img-fluid d-block mt-4 mb-2 onclick_button zoom"></a>
+                            <p>Bean There - Ethiopia Decaf</p>
+                            <p>
+                                <span class=store_item-price> R80</span>
+                                <button type="submit" class="btn btn-secondary btnAddItem" value="5" id="5">+</button>
+                            </p>
+                        </td>
+                        <td>
+                            <a class="onclick_button" href="#popup6"><img src="../images/store-artisan3.jpg" alt="artisan3" class="img-thumbnail img-fluid d-block mt-4 mb-2 onclick_button zoom"></a>
+                            <p>Rosetta Nicaragua Buena</p>
+                            <p>
+                                <span class=store_item-price> R140</span>
+                                <button type="submit" class="btn btn-secondary btnAddItem" value="6" id="6">+</button>
+                            </p>
+                        </td>
+                    </tr>
+                    <!--******************************** third row ********************************-->
+                    <tr>
+                        <th scope="row" id="caffeine-library">CAFFEINE LIBRARY</th>
+                        <td>
+                            <a class="onclick_button" href="#popup7"><img src="../images/store-book1.jpg" alt="book1" class="img-thumbnail img-fluid  d-block mt-4 mb-2 onclick_button zoom"></a>
+                            <p>Cofee Culture</p>
+                            <p>
+                                <span class=store_item-price> R50</span>
+                                <button type="submit" class="btn btn-secondary btnAddItem" value="7" id="7">+</button>
+                            </p>
+                        </td>
+                        <td>
+                            <a class="onclick_button" href="#popup8"><img src="../images/store-book2.jpg" alt="book2" class="img-thumbnail img-fluid  d-block mt-4 mb-2 onclick_button zoom"></a>
+                            <p>Brew: Better Coffee At Home</p>
+                            <p>
+                                <span class=store_item-price> R340</span>
+                                <button type="submit" class="btn btn-secondary btnAddItem" value="8" id="8">+</button>
+                            </p>
+                        </td>
+                        <td>
+                            <a class="onclick_button" href="#popup9"><img src="../images/store-book3.jpg" alt="book3" class="img-thumbnail img-fluid  d-block mt-4 mb-2 onclick_button zoom"></a>
+                            <p>Coffee Obsession</p>
+                            <p>
+                                <span class=store_item-price> R360</span>
+                                <button type="submit" class="btn btn-secondary btnAddItem" value="9" id="9">+</button>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- PRODUCT CATALOGUE DESCRIPTIONS -->
+    <!-- in this section we allow clicking of images to come into effect so that they can pop with descriptions -->
+    <!-- product 1 -->
+    <div id="popup1" class="onclick_overlay">
+        <div class="popup">
+            <h3>Brewing Gear</h3>
+            <h4>Item: Bialetti Moka Express Stovetop Espresso</h4>
+            <h5>Price: R500</h5>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p> ➔ Makes a concentrated rich espresso-style coffee <br>➔ Made of highly durable aluminium <br>➔ Easy to clean <br>➔ Suitable for gas or electric stoves
+                    <br>➔ Great for camping</p>
+                <button class="btn btn-secondary btnAddItem" value="1">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- product 2 -->
+    <div id="popup2" class="onclick_overlay">
+        <div class="popup">
+            <h3>Brewing Gear</h3>
+            <h4>Item: Expobar Office Leva EB-61 Dual Boiler PID Espresso Machine</h4>
+            <h5>Price: R29000</h5>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p> ➔ Separate 1.5L brewing & steaming boilers <br>➔ Separate boiler on/off switches <br>➔ Pressure gauges<br>➔ Adjustable brewing pressure</p>
+                <button class="btn btn-secondary btnAddItem" value="2">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- product 3 -->
+    <div id="popup3" class="onclick_overlay">
+        <div class="popup">
+            <h3>Brewing Gear</h3>
+            <h4>Item: Bodum Spare French Press Spiral Plate</h4>
+            <h5>Price: R2100</h5>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p> The spiral plate in Bodum's french press coffee makers is cleverly designed to hold the mesh filter in place when you plunge. This is one of the many advantages that the iconic Bodum plungers have over the generic ones you might find at
+                    a grocery store. If you've lost or damaged yours, you can buy a replacement right here - please, make sure to choose the right size!</p>
+                <button class="btn btn-secondary btnAddItem" value="3">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- product 4 -->
+    <div id="popup4" class="onclick_overlay">
+        <div class="popup">
+            <h3>Artisan Roasts</h3>
+            <h4>Item: Legado Single Origin</h4>
+            <h5>Price: R200</h5>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p> Based in Stellenbosch, on Rosenview farm, Legado Coffee Roasters source, roast & blend top quality speciality coffee beans from around the world. We're thrilled to be able to make their delicious coffees available to our customers all
+                    over the country.</p>
+                <button class="btn btn-secondary btnAddItem" value="4">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- product 5 -->
+    <div id="popup5" class="onclick_overlay">
+        <div class="popup">
+            <h3>Artisan Roasts</h3>
+            <h4>Item: Bean There - Ethiopia Decaf</h4>
+            <h5>Price: R80</h5>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p> Based in Stellenbosch, on Rosenview farm, Legado Coffee Roasters source, roast & blend top quality speciality coffee beans from around the world. We're thrilled to be able to make their delicious coffees available to our customers all
+                    over the country.</p>
+                <button class="btn btn-secondary btnAddItem" value="5">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- product 6 -->
+    <div id="popup6" class="onclick_overlay">
+        <div class="popup">
+            <h3>Artisan Roasts</h3>
+            <h4>Item: Rosetta Nicaragua Buena Esperanza</h4>
+            <h5>Price: R140</h5>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p> Nicaraguan coffees are quite en vogue these days, at least in South Africa. The Central American country is reclaiming its rightful spot amongst the most important speciality coffee producers in the region. Still, Nicaragua is not just
+                    another Costa Rica or Guatemala. We find that Nicaraguan coffees are quite unique in their flavour profiles, and this one is no exception.</p>
+                <button class="btn btn-secondary btnAddItem" value="6">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- product 7 -->
+    <div id="popup7" class="onclick_overlay">
+        <div class="popup">
+            <h3>Caffeine Library</h3>
+            <h4>Item: Coffee Culture - The South African Coffee-Lovers Bible </h4>
+            <h5>Price: R50</h5>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p> Coffee Culture is everything you ever wanted to know about coffee – what it is, where it comes from, how to make it, who makes the best, and when and why to drink it. The answer to the last two are easy – whenever you can, and because
+                    you can. This book is the perfect gift for the coffee afficianado – or aspiring coffee guru – in your life.
+                </p>
+                <button class="btn btn-secondary btnAddItem" value="7">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- product 8 -->
+    <div id="popup8" class="onclick_overlay">
+        <div class="popup">
+            <h3>Caffeine Library</h3>
+            <h4>Item: Brew: Better Coffee At Home</h4>
+            <h5>Price: R340</h5>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p> Brian W. Jones demystifies specialty coffee's complexities, teaches you how to buy the best beans and brewing equipment, offers in-depth primers for mastering various slow-coffee techniques (including pour over, French press and moka pot),
+                    and supplies you with dozens of recipes for invigorating coffee-based drinks and cocktails.</p>
+                <button class="btn btn-secondary btnAddItem" value="8">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <!-- product 9 -->
+    <div id="popup9" class="onclick_overlay">
+        <div class="popup">
+            <h3>Caffeine Library</h3>
+            <h4>Item: Coffee Obsession</h4>
+            <h5>Price: R360</h5>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <p>More than 2.25 billion cups of coffee are consumed in the world each day. In Coffee Obsession, we take a journey through the coffee-producing nations around the world, presenting the different styles, flavors, and techniques used to brew
+                    the perfect cup.</p>
+                <button class="btn btn-secondary btnAddItem" value="9">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer section showing general info and contact details -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Visit Us</h6>
+                    <p>We're primarily an online store, but you are welcome to visit our HQ to buy some beans or brewing equipment. We have card payment facilities available.<br> You can also place an order online and collect it in person (the option is
+                        on the cart page).</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <p>212 Durban Rrive, Ridgeway City, Sandton ZA
+                        <br /> <a href="mailto:info@kofyhouse.com?Subject=Hi%20Kofy" target="_top">Email Us |</a>
+                        <a href="mailto:callcentre@postnetsa.co.za?Subject=Hi%20Shippers" target="_top">Mail Our Shipping Crew</a>
+                        <br />+27 (0)87 073 5694 | +27 (0)745730889
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center">© 2020 Copyright: <b>www.kofyhouse.co.za</b> | <b>Ali Mongi</b> @HyperionDev</div>
+    </footer>
+</body>
+
+</html>

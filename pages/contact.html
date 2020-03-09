@@ -1,0 +1,29 @@
+<div class="card-body">
+        <!-- form place in container for suitable positioning and feel-->
+        <div class="container">
+            <form style="width: 50%">
+                <!-- classes: 'rounded' 'shadow' -sm -lg borders have rounded edges & implement box shadows -->
+                <!-- horizontal form: adding the .row class to form groups & using the .col-*-* classes species the width of labels and controls: .col-form-label used to vertically center the labels-->
+                <div class="form-group row">
+                    <label for="exampleFormControlInput1" class="col-sm-3 col-form-label">Full Name <span style="color: red; font-weight: bold;">*</span></label>
+                    <div class="col-sm-9 shadow-sm p-3 mb-5 bg-white rounded">
+                        <input class="form-control" type="text" placeholder="Full name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleFormControlInput1" class="col-sm-3">E-mail <span style="color: red; font-weight: bold;">*</span></label>
+                    <div class="col-sm-9 shadow p-3 mb-5 bg-white rounded">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Message <span style="color: red; font-weight: bold;">*</span></label>
+                    <div class="col-sm-9 shadow-lg p-3 mb-5 bg-white rounded">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+                    </div>
+                </div>
+                <!-- button to submit message, this has been customized in the local css-->
+                <a href="#" class="btn btn-primary">SUBMIT</a>
+            </form>
+        </div>
+    </div>

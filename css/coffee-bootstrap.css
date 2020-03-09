@@ -1,0 +1,269 @@
+    /*Ali_Mongi-WD L1T07 - Capstone Project I*/
+    /********** ALL PAGES **********/
+    /* default bg-image */
+    
+    body {
+        background-image: none;
+        background-image: url("../images/main-bg.jpg");
+        background-attachment: fixed;
+    }
+    /* default settings shared among all pages are here */
+    
+    h1 {
+        color: firebrick;
+    }
+    
+    h2 {
+        color: green;
+    }
+    
+    h3 {
+        color: grey;
+    }
+    
+    h4 {
+        color: forestgreen;
+    }
+    
+    h5 {
+        color: olive;
+    }
+    
+    .btn {
+        color: yellow;
+        background-color: green;
+    }
+    
+    .page-footer {
+        background-color: #222;
+        color: white;
+        font-family: Candara, Garamond, Perpetua;
+        font-size: 16px;
+        font-weight: bolder;
+        padding: 15px 0 7px;
+        background-image: url("../images/footer2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .footer-copyright {
+        color: tan;
+        font-family: Candara, Garamond, Perpetua;
+        font-size: smaller;
+        padding: 1px 0;
+    }
+    /********** IMAGE EFFECTS **********/
+    /* we allow images to be zoomed in*/
+    
+    .zoom {
+        transition: transform .2s;
+    }
+    
+    .zoom:hover {
+        -ms-transform: scale(1.5);
+        /* IE 9 */
+        -webkit-transform: scale(1.5);
+        /* Safari 3-8 */
+        transform: scale(1.5);
+    }
+    /* on zoom opacity may be applied */
+    
+    .zoom-opac:hover {
+        opacity: 40%;
+    }
+    /* color filters for images - graying and bluring */
+    
+    .zoom-gray:hover {
+        -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
+    
+    .zoom-blur:hover {
+        webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+    /********** NAVBAR **********/
+    /*navbar bg-color*/
+    
+    #navbar-custom {
+        background-color: burlywood;
+        background-image: url("../images/navbar1.jpg");
+    }
+    /*navbar font-color*/
+    
+    #navbar-custom a {
+        color: khaki;
+        /*sienna*/
+        font-weight: bolder;
+    }
+    /*
+/* logo color 
+#navbar-logo{
+    color: green;
+}*/
+    /********** LANDING PAGE (index.html) **********/
+    /* welcome text settings */
+    
+    .landing-welcome {
+        position: absolute;
+        width: auto;
+        margin-left: 30%;
+        margin-top: 26%;
+        padding: 5;
+        transform: translate(-50%, -55%);
+        text-align: center;
+        font-family: Garamond;
+    }
+    
+    .landing-welcome h1 {
+        color: DARKGOLDENROD;
+    }
+    
+    .landing-welcome p {
+        color: #fff;
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+    /* overlay applied on welcome text area */
+    
+    .landing_overlay {
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    /********** HOME.html **********/
+    /* this table holds the home page images which are in cards */
+    
+    .home_table {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #container_home {
+        font-family: Perpetua, Candara, Garamond;
+        font-size: 23px;
+        padding: 1px
+    }
+    /********** STORE.html **********/
+    /* catalogue images dimensions */
+    
+    .store-table_images img {
+        width: 260px;
+        height: 260px;
+    }
+    /* catalogue table settings */
+    
+    .table {
+        background-color: transparent;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: cursive;
+        font-size: 16px;
+        text-align: left;
+    }
+    /* float boxing applied to hold the prices */
+    
+    .store_item-price {
+        float: left;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    /* float boxing applied to button that adds to cart */
+    
+    .btnAddItem {
+        float: right;
+        background-color: darkkhaki;
+        color: firebrick;
+        font-size: 14px;
+        font-weight: bolder;
+    }
+    /* give bgcolor to catalogue row table headers
+3 font styles with different colouring effects*/
+    
+    #brew-gear {
+        background-color: gainsboro;
+        font-family: Lucida Bright, Arial;
+        color: #696969;
+    }
+    
+    #art-coffee {
+        background-color: silver;
+        font-family: Candara, Arial;
+        color: #2F4F4F;
+    }
+    
+    #caffeine-library {
+        background-color: gray;
+        font-family: monospace, Arial;
+        color: #DCDCDC;
+    }
+    /* shared settings for store page */
+    
+    #container_store {
+        font-family: Perpetua, Candara, Garamond;
+        font-size: 24px;
+        text-align: center;
+        width: 80%;
+        padding: 2px
+    }
+    /********** SHIPPING.html **********/
+    
+    #shipping_order-form {
+        text-align: justify;
+    }
+    /* shared settings for shipping page */
+    
+    #container_shipping {
+        font-family: Perpetua, Candara, Garamond;
+        font-size: 24px;
+        text-align: center;
+        width: 80%;
+        padding: 2px
+    }
+    /********** ABOUT.html **********/
+    /* shared settings for shipping page */
+    
+    #container_about {
+        font-family: Perpetua, Candara, Garamond;
+        font-size: 24px;
+        text-align: center;
+        width: 80%;
+        padding: 2px
+    }
+    /********** COMMUNITY.html **********/
+    
+    #community_list {
+        display: table;
+        margin: 0 auto;
+        text-align: center;
+        list-style-type: none;
+    }
+    /********** CHECKOUT.html **********/
+    
+    .container_checkout {
+        font-family: Perpetua, Candara, Garamond;
+        font-size: 24px;
+        text-align: justify;
+        width: 100%;
+        padding: 2px
+    }
+    
+    .c_header {
+        font-family: Perpetua, Candara, Garamond;
+        font-size: 24px;
+        text-align: justify;
+        float: left;
+        margin-left: 28px;
+        margin-top: 10px;
+        width: 100%;
+        padding: 2px
+    }
+    
+    .card_checkout {
+        width: 18rem;
+        float: right;
+        margin-right: 5px;
+    }

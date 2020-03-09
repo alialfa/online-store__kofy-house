@@ -1,0 +1,244 @@
+<!--Ali_Mongi-WD L1T15 - Capstone Project I-->
+<!-- CHECKOUT.HTML is where an order request is fullfilled-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- inserting of link to bootstrap css sheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Kofy | Checkout</title>
+
+    <!-- my custom styling sheets -->
+    <!-- popup: allows image popup windows -->
+    <!-- font awesome used for icons-->
+    <link rel="stylesheet" type="text/css" href="../css/coffee-bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/popup.css">
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome/css/all.min.css">
+
+    <!-- insert javascript links-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="storeCart.js"></script>
+</head>
+
+<body onload="loadCheckout()">
+    <!-- NAVIGATION -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-secondary navbar-default" id="main-nav"> -->
+    <nav class="navbar navbar-expand-lg navbar-default" id="navbar-custom">
+        <!-- company name with image logo -->
+        <a class="navbar-brand" href="../index.html" id="navbar-logo" style="color: bisque">
+            <!-- <img src="../images/logo.png" width="170" height="60" class="d-inline-block align-top" alt="logo"> -->
+            <b>KH</b>
+        </a>
+        <!-- hamburger toggle menu created in the scenario the windos is too small, menu links display here -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <!-- the actual navbar for an unordered list -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="store.html">STORE</a>
+                </li>
+            </ul>
+            <!-- last items shifted to the right with margin-left auto-->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">
+                        <i class="fas fa-2x fa-cart-arrow-down"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container container_header" id="container_about" style="text-align: justify; float: left; margin-left: 28px; margin-top: 10px;">
+        <h1>Checkout</h1>
+    </div>
+
+    <div class="container container_checkout">
+
+        <!-- here we summarize checkout figures -->
+        <div class="card col-lg-4" style="width: 18rem; float: right; margin-right: 5px;">
+            <div class="card-body">
+                <!-- header for bill section-->
+                <h5 class="card-title" id="checkoutTitle">Checkout Summary</h5>
+                <hr>
+                <!-- show the number of items purchased-->
+                <h6 class="card-subtitle mb-2 text-muted" id="itemCountCheck">.</h6>
+                <hr>
+                <!-- cart bill -->
+                <h6 class="card-subtitle mb-2 text-muted" id="cartCheckTotal">.</h6>
+                <hr>
+                <!-- coupon discount -->
+                <h6 class="card-subtitle mb-2 text-muted" id="discountFee">.</h6>
+                <hr>
+                <!-- shipping fee -->
+                <h6 class="card-subtitle mb-2 text-muted" id="shippersFee">.</h6>
+                <hr>
+                <!-- sub total -->
+                <h5 class="card-subtitle mb-2 text-muted" id="subtotalCheck"></h5>
+                <!-- VAT -->
+                <h5 class="card-subtitle mb-2 text-muted" id="vatCheck"></h5>
+
+                <!-- show final bill amouunt-->
+                <p class="card-text" id="totalPaidCheck" style="font-size: 25px; font-weight: bolder;">.</p>
+
+                <!-- CARD - CONFIRM ORDER -->
+                <div class="form-group" id="cardConfirm">
+                    <div class="form-check" style="font-size: 14px;">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck"> I agree to the terms of service.</label>
+                    </div>
+                    <button type="submit" class="btn btn-warning" id="btnConfirm">CONFIRM ORDER</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-lg-6 container_checkout" style="float: left; margin-left: 30px;">
+
+        <!-- FORM - COUPON DISCOUNT -->
+        <form id="formCoupon">
+            <p>Do you have a discount coupon ?</p>
+            <div class="form-group ">
+                <input type="text" class="form-control" id="inputCoupon" style=" width: 300px;">
+                <label style="font-size: 15px; color: red;">BLACK FRIDAY DEAL_ (20% off all purchases)_CODE: KH007</label>
+            </div>
+            <button class="btn btn-primary " id="btnYesCoupon">APPLY</button>
+            <button class="btn btn-primary " id="btnNoCoupon">DON'T HAVE</button>
+        </form>
+
+        <!-- FORM - COLLECT OR DELIVER (radio) -->
+        <form id="formColDel">
+            <p>How would you like to receive your order ?</p>
+            <!-- radio button to select shipping type -->
+            <div class="form-row">
+                <div class="form-check">
+                    <!-- collection radio-->
+                    <div class="form-group col-md-6">
+                        <input class="form-check-input" type="radio" name="coldel" id="radioCollect" value="collect">
+                        <label class="form-check-label" for="radioCollect"> <i>Collect</i></label>
+                    </div>
+                </div>
+                <div class="form-check">
+                    <!-- delivery radio-->
+                    <div class="form-group col-md-6">
+                        <input class="form-check-input" type="radio" name="coldel" id="radioDeliver" value="deliver">
+                        <label class="form-check-label" for="radioDeliver"><i>Delivery</i></label>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- FORM - COLLECT -->
+        <form id="formCollect">
+            <h2> COLLECTION </h2>
+            <!-- location -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <!-- order can be collected at our offices-->
+                    <label for="inputState">@kofyHouse Pickup Points</label>
+                    <select id="inputState" class="form-control">
+                            <option selected>Region</option>
+                            <option>Gauteng</option>
+                            <option>Western Cape</option>
+                            <option>Kwa-Zulu Natal</option>
+                            <option>Freestate</option>
+                        </select>
+                </div>
+            </div>
+        </form>
+
+        <!-- FORM - DELIVER -->
+        <form id="formDeliver">
+            <h2> DELIVERY</h2>
+            <h3> a) Shipping Type</h3>
+            <!-- radio button to select shipping type -->
+            <div class="form-check">
+                <!-- standard shipping -->
+                <input class="form-check-input" type="radio" name="radioShip" id="radioStdShip" value="60">
+                <label class="form-check-label" for="radioStdShip">Standard Shipping (R60) </label>
+            </div>
+            <div class="form-check">
+                <!-- express shipping -->
+                <input class="form-check-input" type="radio" name="radioShip" id="radioExpShip" value="120">
+                <label class="form-check-label" for="radioExpShip">Express Shipping (R120) </label>
+            </div>
+            <hr style="background-color:yellowgreen;">
+
+            <!-- address -->
+            <h3> b) The Address</h3>
+            <div class="form-group">
+                <!--<label for="inputAddress">Residential Address *</label> -->
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress2">Address Line 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <hr style="background-color:yellowgreen;">
+
+            <!-- location for the user here -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">Region</label>
+                    <select class="form-control">
+                                    <option selected>Region</option>
+                                    <option>Gauteng</option>
+                                    <option>Kwa-Zulu Natal</option>
+                                    <option>Western Cape</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+            </div>
+            <hr style="background-color:yellowgreen;">
+
+            <!-- selection for how to pay-->
+            <h3> c) Payment </h3>
+            <div class="form-group">
+                <!-- select box showing payment type -->
+                <select class="form-control" id="selectPay">
+                    <option>select payment mode</option>
+                    <option value="credit">Credit Card</option><!-- credit card option-->
+                    <option value="eft">EFT</option><!-- eft option-->
+                    <option value="cod">C.O.D - Cash on Delivery</option><!-- cash option-->
+                </select>
+                <!-- font awesome icons reveleaed when a specific mode is chosen-->
+                <i class="fab fa-2x fa-cc-visa" id="icon-credit" style="float: right;"></i>
+                <i class="fas fa-2x fa-money-bill-wave-alt" id="icon-eft" style="float: right;"></i>
+                <i class="far fa-2x fa-money-bill-alt" id="icon-cod" style="float: right;"></i>
+            </div>
+        </form>
+
+        <button class="btn btn-primary " id="btnColDelProceed" style="float: left;">PROCEED</button>
+
+        <!-- when order is almost finished -->
+        <div class="orderReady" style="text-align: center; margin-left: 25%; margin-top: 25%; width: 100%;">
+            <h2>Hey, you are almost there!</h2>
+            <h3>Confirm your order on the right pane.</h3>
+        </div>
+        <!-- when order is complete -->
+        <div class="orderSuccess" style="position:relative;">
+            <h2><i>Congratulations</i></h2>
+            <!-- an image is displayed-->
+            <img src="../images/complete.gif" id="finishGif" alt="gif" style="position:absolute; width: 300px; height:300px;">
+            <h3>ORDER COMPLETE</h3>
+        </div>
+        <br><br><br><br>
+    </div>
+</body>
+
+</html>

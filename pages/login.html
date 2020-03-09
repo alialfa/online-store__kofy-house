@@ -1,0 +1,109 @@
+<!--Ali_Mongi-WD L1T15 - Capstone Project I-->
+<!-- login area to the site as registered user -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- inserting of link to bootstrap css sheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Kofy | Login</title>
+    <!-- my custom styling sheet -->
+    <link rel="stylesheet" type="text/css" href="../css/coffee-bootstrap.css">
+    <style>
+        body {
+            background-image: url("../images/landing-coffee3.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        #login-form {
+            margin-top: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-secondary navbar-default" id="main-nav"> -->
+    <nav class="navbar navbar-expand-lg navbar-default" id="navbar-custom">
+        <!-- company name with image logo -->
+        <a class="navbar-brand" href="../index.html" id="navbar-logo" style="color: bisque">
+            <!-- <img src="../images/logo.png" width="170" height="60" class="d-inline-block align-top" alt="logo"> -->
+            <b>KH</b>
+        </a>
+        <!-- hamburger toggle menu created in the scenario the windos is too small, menu links display here -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- the actual navbar for an unordered list -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="store.html">STORE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shipping.html">SHIPPING & RETURNS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="community.html">COMMUNITY</a>
+                </li>
+            </ul>
+            <!-- last items shifted to the right with margin-left auto-->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- our login form is in a container for look alignment pruposes -->
+    <div class="container-fluid" id="login-form">
+        <h2> Login</h2>
+
+        <!-- first row -->
+        <div class="row">
+            <!-- one short column -->
+            <div class="col-sm-5">
+
+                <!-- users input details here -->
+                <form>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

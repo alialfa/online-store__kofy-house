@@ -1,0 +1,213 @@
+<!--Ali_Mongi-WD L1T15 - Capstone Project I-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- inserting of link to bootstrap css sheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Kofy | Returns & Orders</title>
+
+    <!-- my custom styling sheet -->
+    <!-- animation: allows colored changing backgrounds -->
+    <link rel="stylesheet" type="text/css" href="../css/coffee-bootstrap.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/animation.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-secondary navbar-default" id="main-nav"> -->
+    <nav class="navbar navbar-expand-lg navbar-default" id="navbar-custom">
+        <!-- company name with image logo -->
+        <a class="navbar-brand" href="../index.html" id="navbar-logo" style="color: bisque">
+            <!-- <img src="../images/logo.png" width="170" height="60" class="d-inline-block align-top" alt="logo"> -->
+            <b>KH</b>
+        </a>
+        <!-- hamburger toggle menu created in the scenario the windos is too small, menu links display here -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- the actual navbar for an unordered list -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="store.html">STORE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shipping.html">SHIPPING & RETURNS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="community.html">COMMUNITY</a>
+                </li>
+            </ul>
+            <!-- last items shifted to the right with margin-left auto-->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">
+                        <i class="fas fa-2x fa-cart-arrow-down"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="container_shipping">
+        <!-- here we introduce info on how the company deals with logistics -->
+        <section>
+
+            <h1>Shipping Logistics</h1>
+            <p>
+                Our shipping & delivery timelines quoted are business days - Monday to Friday only, excluding weekends. <br> They vary depending on the delivery option chosen. <a href="#order-form">Fill in our online form</a> to place an order :)
+            </p>
+
+            <!-- alert: used to show color background over text and key info -->
+            <div class="alert alert-success" role="alert">
+                Free delivery in SA on orders over R350!.
+            </div>
+
+            <h2>Postage or Collection</h2>
+            <ul>
+                <li>
+                    <b>Door Delivery:</b> Delivery time starts from the day you place your order to the day one of our delivery associates makes a first attempt to deliver to you.
+                </li>
+                <li>
+                    <b>Pick Up Station:</b> Delivery time starts from the day you place your order to when you receive the first SMS to pick up your order from our pickup station. <br> Ensure you pickup your item within 5 days, otherwise it will be cancelled.
+                </li>
+            </ul>
+
+            <!-- alert: used to show color background over text and key info -->
+            <div class="alert alert-warning" role="alert">
+                Max delivery attempts is 3x over 5 days (7.00 am - 6.20pm )! After which the item will be cancelled.
+            </div>
+
+        </section>
+
+
+        <!-- a grid is used with 6 columns centered that holds an order form -->
+        <div class="container col-md-6" id="shipping_order-form">
+
+            <!-- this is the main form where customers can place orders directly -->
+            <!-- user details are captured for delivery -->
+            <!-- online form is another way to order instead of the cart checkout -->
+            <h2 id="order-form"> Online Order Form</h2>
+            <form>
+                <div class="form-group">
+
+                    <!-- select box showing products-->
+                    <label for="exampleFormControlSelect1">Pick your coffee..</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Brew Gear - Bialetti Moka Express</option>
+                    <option>Brew Gear - Expobar Office Leva</option>
+                    <option>Artisan -Rosetta Nicaragua Buena</option>
+                    <option>Book - Cofee Culture</option>
+                    <option>Book - Better Coffee At Home</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <label>Quantity *</label>
+                    <input type="text" class="form-control" placeholder="Quantity">
+                </div>
+
+                <!-- radio button to select how payment will be made -->
+                <!-- credit card option-->
+                <div class="form-check">Mode of payment *<br>
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">Credit Card</label>
+                </div>
+                <!-- eft option-->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">EFT</label>
+                </div>
+                <!-- cash option-->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                    <label class="form-check-label" for="exampleRadios3">Cash on Delivery</label>
+                </div>
+
+                <!-- address -->
+                <div class="form-group">
+                    <label for="inputAddress">Delivery Address *</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Address Line 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+
+                <!-- location -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Region</label>
+                        <select id="inputState" class="form-control">
+                        <option selected>Region</option>
+                        <option>Gauteng</option>
+                        <option>Kwa-Zulu Natal</option>
+                        <option>Western Cape</option>
+                    </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                </div>
+
+                <!-- checkbox to agree to terms-->
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                        I agree to the terms of service.
+                    </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-warning">ORDER NOW</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- footer section showing general info and contact details -->
+    <footer class="page-footer">
+        <div class="container_shipping">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Visit Us</h6>
+                    <p>We're primarily an online store, but you are welcome to visit our HQ to buy some beans or brewing equipment. We have card payment facilities available.<br> You can also place an order online and collect it in person (the option is
+                        on the cart page).</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <p>212 Durban Rrive, Ridgeway City, Sandton ZA
+                        <br /> <a href="mailto:info@kofyhouse.com?Subject=Hi%20Kofy" target="_top">Email Us |</a>
+                        <a href="mailto:callcentre@postnetsa.co.za?Subject=Hi%20Shippers" target="_top">Mail Our Shipping Crew</a>
+                        <br />+27 (0)87 073 5694 | +27 (0)745730889
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center">© 2020 Copyright: <b>www.kofyhouse.co.za</b> | <b>Ali Mongi</b> @HyperionDev</div>
+    </footer>
+</body>
+
+</html>

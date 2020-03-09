@@ -1,0 +1,25 @@
+ /* this is a custom animation css to alter the pages background colours for 
+ the first 30 seconds, and it reverts to default */
+ 
+ body {
+     animation: colorchange 30s;   /* animation-name followed by duration in seconds*/
+     -webkit-animation: colorchange 30s; /* Chrome and Safari */
+ }
+
+   @keyframes colorchange
+    {
+      0%   {background: WHEAT;}
+      25%  {background: PERU;}
+      50%  {background: NAVAJOWHITE;}
+      75%  {background: SANDYBROWN;}
+      100% {background: CORNSILK;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: WHEAT;}
+      25%  {background: PERU;}
+      50%  {background: NAVAJOWHITE;}
+      75%  {background: SANDYBROWN;}
+      100% {background: CORNSILK;}
+    }
