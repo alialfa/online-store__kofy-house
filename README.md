@@ -1,5 +1,8 @@
 # THE KOFY HOUSE PROJECT
 
+[KH]:
+![alt text] (https://github.com/alialfa/online-store__kofy-house/images/khlogo.png)
+
 **PROJECT NAME:** 
 KOFY HOUSE - *an online coffee shop / store*
 
@@ -11,8 +14,6 @@ The goal of the Kofy House project was to create a functional front-end online s
 **INSTALLATION:** Installation is the next section in an effective README. Tell other users how to install your project locally. Optionally, include a gif to make the process even more clear for other people.
 
 **USAGE:** [usageImg] The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
-
-[usageImg]: https://images.app.goo.gl/hHgunawJyvBUCvoUA
 
 **CREDITS:** This project was compiled via collaboration with the following authors: 
 - Ali Mongi [email](mailto:alphan.mongi@gmail.com)
